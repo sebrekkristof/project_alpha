@@ -2,6 +2,8 @@
 
 This project is a web application that utilizes Chart.js for data visualization. It provides an interactive way to display data in various chart formats.
 
+Try live link: https://sebrekkristof.github.io/project_alpha/
+
 ## Project Structure
 
 ```
