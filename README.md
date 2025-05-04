@@ -1,4 +1,4 @@
-# Chart.js Project
+# Project_Alpha
 
 This project is a web application that utilizes Chart.js for data visualization. It provides an interactive way to display data in various chart formats.
 
