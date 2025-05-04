@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Időkövető Webapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Időkövető Webalkalmazás</h1>
+    <nav>
+        <button onclick="showSection('tasks')">Feladatok</button>
+        <button onclick="showSection('timer')">Időzítő</button>
+        <button onclick="showSection('stats')">Statisztikák</button>
+        <button onclick="showSection('export')">Export</button>
+        <button onclick="showSection('reminders')">Emlékeztetők</button>
+        <button id="setReminderButton">Emlékeztető beállítása</button>
+    </nav>
+    <main>
+        <section id="tasks" style="display:none;">
+            <h2>Feladatok és projektek</h2>
+            <input type="text" id="taskInput" placeholder="Új feladat">
+            <button onclick="addTask()">Hozzáadás</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="timer" style="display:none;">
+            <h2>Pomodoro időzítő</h2>
+            <div id="timerDisplay">25:00</div>
+            <button onclick="startTimer()">Indítás</button>
+            <button onclick="pauseTimer()">Szünet</button>
+            <button onclick="resetTimer()">Alaphelyzet</button>
+        </section>
+
+        <section id="stats" style="display:none;">
+            <h2>Statisztikák</h2>
+            <canvas id="timeChart"></canvas>
+        </section>
+        <section id="stats" style="display:none;">
+            <h2>Statisztikák</h2>
+            <canvas id="timeChart"></canvas>
+            <button id="updateChart">Frissítés</button>
+        </section>
+        <section id="export" style="display:none;">
+            <h2>Adatok exportálása</h2>
+            <button onclick="exportCSV()">Export CSV-be</button>
+        </section>
+
+        <section id="reminders" style="display:none;">
+            <h2>Emlékeztetők</h2>
+            <button onclick="setReminder()">Emlékeztető beállítása 1 percre</button>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="tasks.js"></script>
+    <script src="stats.js"></script>
+    <script src="export.js"></script>
+    <script src="reminders.js"></script>
+    <script src="style.css"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+       
+        showSection('tasks');
+    </script>
+</body>
+</html>

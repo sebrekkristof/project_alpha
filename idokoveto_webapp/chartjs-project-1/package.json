@@ -1,0 +1,14 @@
+{
+  "name": "chartjs-project",
+  "version": "1.0.0",
+  "description": "A project to demonstrate Chart.js usage.",
+  "main": "src/script.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "dependencies": {
+    "chart.js": "^3.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
